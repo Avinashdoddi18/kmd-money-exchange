@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>KMD Money Exchange</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <div class="header-content">
+
+            <div class="logo-icon">
+                💰
+            </div>
+
+            <div>
+                <h1>KMD Money Exchange</h1>
+
+                <p>
+                    Connecting Cash ↔ UPI in Komarada
+                </p>
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- MAIN -->
+    <main class="container">
+
+
+        <!-- INTRO -->
+        <section class="intro">
+
+            <h2>
+                Cash ↔ UPI Connection
+            </h2>
+
+            <p>
+                Need Cash or UPI? Submit your requirement
+                and connect with people in Komarada.
+            </p>
+
+            <div class="free-badge">
+                🆓 FREE SERVICE — NO COMMISSION
+            </div>
+
+        </section>
+
+
+
+        <!-- FORM -->
+        <section class="card">
+
+            <h2>
+                📢 Submit Your Requirement
+            </h2>
+
+            <p class="description">
+                Fill in your details. Your request will be
+                prepared and sent to the KMD Admin on WhatsApp.
+            </p>
+
+
+            <!-- NAME -->
+
+            <label for="name">
+                NAME
+            </label>
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Enter your name"
+                maxlength="50"
+            >
+
+
+            <!-- TYPE -->
+
+            <label>
+                TYPE — WHAT YOU HAVE
+            </label>
+
+            <div class="options">
+
+                <button
+                    type="button"
+                    class="option"
+                    id="cashButton"
+                    onclick="selectType('CASH')"
+                >
+                    💵 CASH
+                </button>
+
+
+                <button
+                    type="button"
+                    class="option"
+                    id="upiButton"
+                    onclick="selectType('UPI')"
+                >
+                    📱 UPI
+                </button>
+
+            </div>
+
+
+
+            <!-- NEED -->
+
+            <label>
+                NEED — WHAT YOU WANT
+            </label>
+
+            <div class="options">
+
+                <button
+                    type="button"
+                    class="option"
+                    id="needCashButton"
+                    onclick="selectNeed('CASH')"
+                >
+                    💵 CASH
+                </button>
+
+
+                <button
+                    type="button"
+                    class="option"
+                    id="needUpiButton"
+                    onclick="selectNeed('UPI')"
+                >
+                    📱 UPI
+                </button>
+
+            </div>
+
+
+
+            <!-- AMOUNT -->
+
+            <label for="amount">
+                AMOUNT
+            </label>
+
+            <div class="input-wrapper">
+
+                <span>₹</span>
+
+                <input
+                    type="number"
+                    id="amount"
+                    placeholder="Enter amount"
+                    min="1"
+                >
+
+            </div>
+
+
+
+            <!-- LOCATION -->
+
+            <label for="location">
+                LOCATION
+            </label>
+
+            <input
+                type="text"
+                id="location"
+                value="Komarada"
+                placeholder="Enter location"
+            >
+
+
+
+            <!-- CONTACT -->
+
+            <label for="contact">
+                CONTACT / WHATSAPP NO.
+            </label>
+
+            <input
+                type="tel"
+                id="contact"
+                placeholder="Enter 10-digit WhatsApp number"
+                maxlength="10"
+            >
+
+
+
+            <!-- SUBMIT -->
+
+            <button
+                type="button"
+                class="submit-button"
+                onclick="submitRequest()"
+            >
+
+                📲 SEND REQUEST TO KMD ADMIN
+
+            </button>
+
+
+
+            <!-- RESULT -->
+
+            <div
+                id="result"
+                class="result"
+            >
+            </div>
+
+        </section>
+
+
+
+
+        <!-- HOW IT WORKS -->
+
+        <section class="card">
+
+            <h2>
+                🔄 How It Works
+            </h2>
+
+
+            <div class="steps">
+
+
+                <div class="step">
+
+                    <div class="number">
+                        1
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Submit Request
+                        </h3>
+
+                        <p>
+                            Enter your Cash / UPI requirement.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="step">
+
+                    <div class="number">
+                        2
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Admin Receives
+                        </h3>
+
+                        <p>
+                            KMD Admin receives your request
+                            through WhatsApp.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="step">
+
+                    <div class="number">
+                        3
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Admin Posts
+                        </h3>
+
+                        <p>
+                            Admin can post the request
+                            in the KMD WhatsApp Channel.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="step">
+
+                    <div class="number">
+                        4
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Connect & Exchange
+                        </h3>
+
+                        <p>
+                            Interested people contact each
+                            other and complete their own
+                            transaction.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+
+        <!-- ADMIN -->
+
+        <section class="admin-card">
+
+            <div class="admin-icon">
+                📞
+            </div>
+
+            <h2>
+                KMD Admin
+            </h2>
+
+            <p>
+                Need help? Contact the KMD Admin.
+            </p>
+
+            <a
+                href="https://wa.me/917794057386"
+                target="_blank"
+            >
+                WhatsApp: 7794057386
+            </a>
+
+        </section>
+
+
+
+
+        <!-- GUIDELINES -->
+
+        <section class="card">
+
+            <h2>
+                ⚠️ Guidelines
+            </h2>
+
+            <ul>
+
+                <li>
+                    KMD is a free connection service.
+                </li>
+
+                <li>
+                    No commission or service charges.
+                </li>
+
+                <li>
+                    Admin only connects people.
+                </li>
+
+                <li>
+                    Verify the person before completing
+                    any transaction.
+                </li>
+
+                <li>
+                    Meet in a safe public place.
+                </li>
+
+                <li>
+                    Never share your UPI PIN, OTP,
+                    ATM PIN or password.
+                </li>
+
+                <li>
+                    KMD does not collect, hold or
+                    guarantee anyone's money.
+                </li>
+
+            </ul>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <strong>
+            KMD Money Exchange
+        </strong>
+
+        <p>
+            Connecting Cash ↔ UPI in Komarada
+        </p>
+
+    </footer>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
